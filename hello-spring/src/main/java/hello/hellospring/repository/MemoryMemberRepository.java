@@ -22,10 +22,9 @@ public class MemoryMemberRepository implements MemberRepository{
 
     @Override
     public Optional<Member> findByName(String name) {
-        store.values().stream()
+        return store.values().stream()
                 .filter(member -> member.getName().equals(name))
                 .findAny();
-        return Optional.empty();
     }
 
     @Override
