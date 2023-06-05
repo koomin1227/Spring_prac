@@ -1,0 +1,17 @@
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+    <h1>gpt Test 화면입니다.</h1>
+    <form action="/gpt/quest" method="post">
+        <input type="text" name="quest" placeholder="text your question" />
+        <button type="submit">quest</button>
+
+        <p th:text = "${answer}"></p>
+    </form>
+
+    <p>gpt using</p>
+</div> <!-- /container -->
+</body>
+</html>

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
+
 @Controller
 public class MemberController {
 
@@ -51,6 +52,7 @@ public class MemberController {
     public String login(MemberForm form) {
         String id = form.getName();
         String pw = form.getPassword();
+        System.out.print(form.getName());
         MemoryMemberRepository repository = new MemoryMemberRepository();
         target = repository.findByName(id).get();
         if (target.getPassword().equals(pw) == true)
