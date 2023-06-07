@@ -1,4 +1,5 @@
 function dataSend() {
+    $('#quest').text($("#input").val());
     var data=$("#input").val();
     var messageDTO={
         result:data
@@ -10,5 +11,7 @@ function dataSend() {
         type:"POST",
     }).done(function (fragment) {
         $("#resultDiv").replaceWith(fragment);
+//           $("#resultDiv").append(fragment);
     });
 }
+
